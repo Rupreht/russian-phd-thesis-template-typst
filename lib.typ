@@ -60,7 +60,6 @@
     lang: "ru",
     size: font-size,
     fallback: true,
-    hyphenate: false,
   )
 
   // Установка свойств страницы
@@ -82,6 +81,7 @@
     set text(
       font: font-type,
       size: font-size,
+      hyphenate: false,
     )
     set block(
       above: 3em,
@@ -159,7 +159,7 @@
     align: (left + bottom, right + bottom),
     logo, "На правах рукописи",
   )
-  set text(size: 16pt)
+  set text(size: 16pt, hyphenate: false)
   v(1em)
   author-name // ФИО автора
   v(1em)
@@ -192,6 +192,7 @@
   )
   counter(page).update(1)
 
+  set text(hyphenate: auto)
   // Содержание
   // #align(right)[Стр.]
   outline(title: "Содержание", indent: 1.5em, depth: 3)
